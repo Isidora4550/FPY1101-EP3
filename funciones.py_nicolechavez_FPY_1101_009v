@@ -1,0 +1,58 @@
+import os
+libro=[]
+
+
+
+def registro():
+    try:
+      titulo=input("ingrese el titulo")
+      autor=input("ingrese el autor")
+      anio=input("ingrese el anio del libro")
+      sku=input("ingrese el sku del libro")
+      if titulo==""or autor=="" or anio=="" or sku<=0:
+          print("error faltaron datos por ingresar")
+      else:
+          libro={
+              "titulo":titulo,
+              "autor":autor,
+              "anio":anio,
+              "sku":sku
+              }
+          libro.append(libro)
+          print("libro registrado")
+    except ValueError:
+        print("error faltaron datos por ingresar")  
+def prestar():
+       nombre=input("")
+   
+
+          
+
+
+   
+
+def menu():
+     while true:
+            try:
+                print("****MENU****")
+                print("1.registrar libro\n2.prestar libro\n3.listar todos los libros\n4.imprimir reposte de prestamos\n5.salir del programa")
+                op=int(input("ingrese una opcion:"))
+            except ValueError:
+             print(" dato erroneo intente nuevamente")
+            if op==1:
+             registro()
+            elif op==2:
+                prestar() 
+            elif op==3:
+                listar()
+            elif op==4: 
+                imprimir()
+            elif op==5:
+                salir()
+            print("finalizando el programa ")
+            break
+     else:
+        print("opcion no valida, intente nuevamente")
+
+
+
